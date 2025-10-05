@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Ibrahim — Frontend Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, #0f172a, #1e293b);
+      color: #f1f5f9;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+      max-width: 1000px;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    /* LEFT SIDE */
+    .left {
+      flex: 1 1 320px;
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .left img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.6);
+      border: 3px solid #06b6d4;
+    }
+
+    .left h2 {
+      margin-top: 15px;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .left p {
+      font-size: 0.95rem;
+      color: #94a3b8;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      margin-top: 15px;
+      margin-right: 6px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #06b6d4, #7c3aed);
+      color: #0f172a;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    .contact-btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(90deg, #7c3aed, #06b6d4);
+    }
+
+    /* RIGHT SIDE */
+    .right {
+      flex: 2 1 450px;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #f8fafc;
+      margin-bottom: 10px;
+    }
+
+    p.lead {
+      color: #cbd5e1;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    /* SKILLS SECTION */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .skill {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      color: #94a3b8;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideFadeIn 0.6s forwards;
+    }
+
+    .skill:nth-child(1) { animation-delay: 0.2s; }
+    .skill:nth-child(2) { animation-delay: 0.4s; }
+    .skill:nth-child(3) { animation-delay: 0.6s; }
+    .skill:nth-child(4) { animation-delay: 0.8s; }
+    .skill:nth-child(5) { animation-delay: 1.0s; }
+    .skill:nth-child(6) { animation-delay: 1.2s; }
+    .skill:nth-child(7) { animation-delay: 1.4s; }
+    .skill:nth-child(8) { animation-delay: 1.6s; }
+
+    @keyframes slideFadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ABOUT SECTION */
+    .about {
+      margin-top: 20px;
+      line-height: 1.6;
+      color: #cbd5e1;
+    }
+
+    footer {
+      text-align: center;
+      color: #94a3b8;
+      font-size: 0.85rem;
+      margin-top: 30px;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .right {
+        padding: 25px 20px;
+      }
+
+      .contact-btn {
+        margin: 10px 5px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .left img {
+        width: 130px;
+        height: 130px;
+      }
+
+      .contact-btn {
+        padding: 8px 14px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <img src="ibrahim.jpeg" alt="Muhammad Ibrahim" />
+      <h2>Muhammad Ibrahim</h2>
+      <p>Frontend Developer & Graphic Designer</p>
+      <a href="mailto:m.ibrahim.graphic@gmail.com" class="contact-btn">Email Me</a>
+      <a href="https://www.linkedin.com/in/muhammad-ibrahim-frontend/" class="contact-btn" target="_blank">LinkedIn</a>
+      <a href="tel:+923012925662" class="contact-btn">Call Me</a>
+    </div>
+
+    <div class="right">
+      <h1>Hello — I'm Muhammad Ibrahim</h1>
+      <p class="lead">
+        I'm a passionate Frontend Developer and Graphic Designer from Pakistan. I create responsive, user-friendly websites with clean and modern design. As a fresher, I love learning new technologies and bringing ideas to life through code and creativity.
+      </p>
+
+      <h3>Skills</h3>
+      <div class="skills">
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">jQuery</div>
+        <div class="skill">Bootstrap</div>
+        <div class="skill">Adobe Photoshop</div>
+        <div class="skill">Adobe Illustrator</div>
+        <div class="skill">MS Office</div>
+      </div>
+
+      <div class="about">
+        <h3>About Me</h3>
+        <p>
+          I’m Muhammad Ibrahim, a creative and detail-oriented Frontend Developer & Graphic Designer. I focus on crafting responsive web interfaces and unique designs. My goal is to continue improving my coding and design abilities to build professional digital experiences for the future.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Muhammad Ibrahim — m.ibrahim.graphic@gmail.com
+  </footer>
+</body>
+</html>
